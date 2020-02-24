@@ -23,24 +23,26 @@
 		<table border="1"cellspacing="0">
 			<thead>
 			<tr>
-                <?php for ($i=0; $i < 11; $i++): ?>
-                	<th style="background-color:#ccc"><?php echo $i; ?></th>
+                <?php for ($headCount=0; $headCount < 11; $headCount++): ?>
+                	<th style="background-color:#ccc"><?php echo $headCount; ?></th>
                 <?php endfor; ?>
 			</tr>
 			</thead>
 			<tbody>
-	            <?php for ($y=1; $y < 11; $y++): ?>
+	            <?php for ($row=1; $row < 11; $row++): ?>
 			        <tr>
-				        <td style="background-color:#ccc"><?php echo $y; ?></td>
-			            <?php for ($j=1; $j < 11; $j++): ?>
+				        <td style="background-color:#ccc"><?php echo $row; ?></td>
+			            <?php for ($col=1; $col < 11; $col++): ?>
 							<td>
-								<?php if ($y % 2):
-									if ($j % 2): echo '[' . $y * $j . ']';
-										else: echo $y * $j;
-										endif;
-									elseif ($j % 2): echo $y * $j;
-									else: echo '(' . $y * $j . ')';
-								endif;?>
+								<?php
+									if ($row % 2 === 0 && $col % 2 === 0) {
+                                        echo '(' . $row * $col . ')';
+									} elseif ($row % 2 === 1 && $col % 2 === 1) {
+                                        echo '[' . $row * $col . ']';
+									}else {
+                                        echo $row * $col;
+									}
+								?>
 							</td>
 			            <?php endfor; ?>
 			        </tr>

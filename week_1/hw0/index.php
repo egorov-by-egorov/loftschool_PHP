@@ -1,8 +1,8 @@
 <?php
-    require_once 'config.php';
+require_once 'config.php';
 
-    $userName = "Igor";
+$userName = "Igor";
 
-    if (1 == 1) {
-        echo 'hi';
-    }
+if (1 == 1) {
+    echo 'hi';
+}

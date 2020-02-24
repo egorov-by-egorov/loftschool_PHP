@@ -1,7 +1,7 @@
 <?php
-    const TEST_CONSTANTA = 'asd';
+const TEST_CONSTANTA = 'asd';
 
-    function showSomething()
-    {
-        return 'SOMETHING';
-    }
+function showSomething()
+{
+    return 'SOMETHING';
+}
