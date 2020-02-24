@@ -16,6 +16,6 @@ $opel = ['model' => 'Astra OPC', 'speed' => 260, 'doors' => 3, 'year' => 2018];
 $cars = array('bmw' => $bmw, 'toyota' => $toyota, 'opel' => $opel);
 
 foreach ($cars as $brand => $car) {
-    echo strtoupper($brand) . ' / ' . $car['model'];
-    echo '<pre>'.print_r($car, 1).'</pre>';
+    echo 'Car ' . $brand . '<br>';
+    echo $car['model'] . ' ' . $car['speed'] . ' ' . $car['doors'] . ' ' . $car['year'] . '<br><br>';
 }

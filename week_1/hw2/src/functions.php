@@ -1,7 +1,11 @@
 <?php
-    function task1()
+    function task1($arr)
     {
-
+        if (!is_array($arr)) {
+            echo 'Нужно передать массив';
+        }
+        foreach ($arr as $value) {
+        }
     };
     function task2()
     {
