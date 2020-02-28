@@ -96,5 +96,5 @@ function task5()
 file_put_contents("test.txt", 'Hello world');
 function task6(string $nameFile)
 {
-    file_get_contents("test.txt");
+    echo file_get_contents("test.txt");
 };
