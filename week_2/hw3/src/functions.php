@@ -107,4 +107,7 @@ function task3()
 function task4()
 {
     $data = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json');
+    $data = json_decode($data, true);
+    echo $data['query']['pages']['15580374']['pageid'] . '<br>';
+    echo $data['query']['pages']['15580374']['title'];
 }
