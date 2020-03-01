@@ -77,5 +77,34 @@ function task2()
 
 function task3()
 {
+    $dataToCSV = [];
+    $positiveNumResult = 0;
 
+    for ($i = 0; $i <= 50; $i++) {
+        array_push($dataToCSV, (string) rand(1, 100));
+    }
+
+    $fp = fopen('src/file.csv', 'w+');
+
+    fputcsv($fp, $dataToCSV,';');
+    fseek($fp, 0);
+
+    $dataFromCSV = fgetcsv($fp, 1000*1024,';');
+
+    echo "список суммирующихся чисел:<br>";
+
+    for ($i = 0; $i < count($dataFromCSV); $i++) {
+        if ($dataFromCSV[$i] % 2 === 0) {
+            $positiveNumResult += $dataFromCSV[$i];
+            echo "$dataFromCSV[$i]; ";
+        }
+    }
+
+    fclose($fp);
+    echo "<br>Сумма этих чисел = $positiveNumResult";
+}
+
+function task4()
+{
+    $data = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json');
 }
