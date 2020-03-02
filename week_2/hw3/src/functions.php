@@ -40,7 +40,7 @@ function task1()
     }
 
     echo '</table><br>';
-    echo $dataXML->DeliveryNotes;
+    echo $dataXML->DeliveryNotes . '<hr>';
 };
 
 function task2()
@@ -60,7 +60,7 @@ function task2()
 
     if (rand(0, 1)) {
         array_push($dataFromOutput2, 'new string');
-        echo 'Файл output2 изменен.<br>';
+        echo "Файл output2 изменен.<br>";
     }
 
     $dataToOutput2 = json_encode($dataFromOutput2, JSON_UNESCAPED_UNICODE);
@@ -70,7 +70,7 @@ function task2()
 
     foreach ($dataFromOutput2 as $value) {
         if (!in_array($value, $dataFromOutput)) {
-            echo "Разница: $value<br>";
+            echo "Разница: $value<hr>";
         }
     }
 }
@@ -101,7 +101,7 @@ function task3()
     }
 
     fclose($fp);
-    echo "<br>Сумма этих чисел = $positiveNumResult";
+    echo "<br> Сумма этих чисел = $positiveNumResult <hr>";
 }
 
 function task4()
