@@ -4,8 +4,7 @@ class HourTariff extends Tariff
 {
     use Driver;
 
-    protected $minutePrice = 3.3;
-
+    protected $minutePrice = 200 / 60;
 
     public function calculate($distance, $time, $age, $addGps = false, $addDriver = false)
     {
